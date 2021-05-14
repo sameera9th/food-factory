@@ -1,4 +1,4 @@
-# Food-Factory (React/Redux, Mongo and Express API with Docker)
+# Food-Factory (React/Redux(Saga), Mongo and Express API with Docker)
 
 This project is written as a full-stack ReactJS, Redux with a Mongo Database and an Express with Typescript backend API. The Express and Mongo are defined using [Docker Compose](https://docs.docker.com/compose/), which runs two independent containers for Database (Mongo), and Express simultaneously.
 
