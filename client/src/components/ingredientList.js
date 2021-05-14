@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { memo, useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 // configs
@@ -16,7 +16,7 @@ import {
   addNewIngredient,
 } from "../redux/actions/food";
 
-const IngredientList = () => {
+const IngredientList = memo(() => {
   const dispatch = useDispatch();
   const { ingredients, fetching, error } = useSelector((state) => state.food);
 
@@ -107,7 +107,7 @@ const IngredientList = () => {
   /* create list of items */
   const listItems = () => {
     return ingredients.map((item, i) => (
-      <div key={i} className="dnd-list">
+      <div key={item._id} className="dnd-list">
         <ListItem
           key={i}
           id={i}
@@ -160,6 +160,6 @@ const IngredientList = () => {
       />
     </div>
   );
-};
+});
 
 export default IngredientList;
